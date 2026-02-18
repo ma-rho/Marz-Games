@@ -1,14 +1,12 @@
 import GameClient from './game-client';
 
 type GamePageProps = {
-  params: {
-    gameCode: string;
-  };
+  params: Promise<{ gameCode: string }>;
 };
 
-export default function GamePage({ params }: GamePageProps) {
-  const gameCode = params.gameCode.toUpperCase();
+export default async function GamePage({ params }: GamePageProps) {
+  const { gameCode } = await params;
 
   // The GameClient component will handle all fetching, loading, and error states.
-  return <GameClient gameCode={gameCode} />;
+  return <GameClient gameCode={gameCode.toUpperCase()} />;
 }
