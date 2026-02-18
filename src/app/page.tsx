@@ -302,7 +302,7 @@ export default function Home() {
         <p>
           How to play: One player asks a \"Who...\" question to another player in
           secret. The second player answers by naming a player. The named player
-          can then choose to \"drink\" to reveal the question.
+          can then challenge to reveal the question.
         </p>
       </footer>
     </main>
