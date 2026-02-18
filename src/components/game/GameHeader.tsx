@@ -44,7 +44,7 @@ export default function GameHeader({
   };
 
   const handleEndGame = async () => {
-    const result = await endGame(game.gameCode, currentUser.uid);
+    const result = await endGame(game.gameCode);
     if(result.error) {
         toast({ variant: 'destructive', title: 'Error', description: result.error });
     } else {
